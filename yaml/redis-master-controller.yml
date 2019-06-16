@@ -17,4 +17,5 @@ spec:
         - name: redis-master
           image: redis:2.8.23
           ports:
-            - containerPort: 6379
+            - name: redis-server
+              containerPort: 6379

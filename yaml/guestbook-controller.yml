@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: guestbook
-          image: myf5/k8s-guestbook-go-v3
+          image: k8s.gcr.io/guestbook:v3
           ports:
             - containerPort: 3000

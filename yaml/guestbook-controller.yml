@@ -1,0 +1,20 @@
+kind: ReplicationController
+apiVersion: v1
+metadata:
+  name: guestbook
+  labels:
+    app: guestbook
+spec:
+  replicas: 3
+  selector:
+    app: guestbook
+  template:
+    metadata:
+      labels:
+        app: guestbook
+    spec:
+      containers:
+        - name: guestbook
+          image: myf5/k8s-guestbook-go-v3
+          ports:
+            - containerPort: 3000

@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: guestbook-host-ingress
+spec:
+  rules:
+    - host: guestbook.com
+      http:
+        paths:
+          - backend:
+              serviceName: guestbook
+              servicePort: 3000

@@ -5,8 +5,10 @@ metadata:
   labels:
     app: guestbook
 spec:
+  type: NodePort
   ports:
     - port: 3000
       targetPort: 3000
+      nodePort: 30036
   selector:
     app: guestbook
